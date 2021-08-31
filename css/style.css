@@ -1,0 +1,422 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #212529;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.home{
+    width: 100%;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,auto);
+    grid-template-areas: 
+    "header header header header "
+    "home__picture home__picture home__texto home__texto"
+    "footer footer footer footer"
+    ;grid-gap: 5px;
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #212529;
+    color: #E5E5E5;
+    grid-area: header;
+    position: fixed;
+}
+
+.menu__contenedor{
+    display: none;
+}
+
+.logo{
+    margin-left: 1.125em;
+    padding: 0.3125em 0.5em;
+    margin-top: 0.5em;
+    font-size: 1.25em;
+}
+
+.enlaces{
+    margin-top: 0.75em;
+}
+
+.enlaces >a{
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2em;
+    color:#E5E5E5;
+    padding: 0.25em 1.125em;
+    transition: all 0.2s;
+    display: inline-block;
+}
+
+
+
+.active{
+    background-color: #0085FF;
+    border-radius: 1.875em;
+    color: #FFF;
+}
+
+.social{
+    text-align: center;
+    margin-right: 1.125em;
+    margin-top: 0.875em;
+}
+
+.social__svg{
+    margin: 0 0.3125em;
+    transition: all 0.2s;
+    width: 1.8em;
+    height: 1.8em;
+}
+
+.social__svg:hover{
+    transform: translateY(-8%);
+}
+
+/*Contenido principal*/
+
+.home__picture{
+    margin-left: none;
+    grid-area: home__picture;
+    margin-right: 3rem;
+    margin-top: 1.7rem;
+}
+
+.home__picture > img{
+    width: 46.75rem;
+    height: 39.375rem;
+}
+
+.home__texto{
+    margin: 7em 1.25rem;
+    color:#E5E5E5;
+    font-weight: 900;
+    grid-area: home__texto;
+}
+
+.texto > h1{
+    letter-spacing: 3px;
+    font-size: 2.4em;
+    color: #00CEFC;
+    font-weight: 900;
+}
+
+.texto > h2{
+    letter-spacing: 3px;
+    color:#E5E5E5;
+    font-size: 2.1em;
+    font-weight: 900;
+}
+
+.texto>h3{
+    letter-spacing: 3px;
+    font-size: 1.5em;
+    color:#E5E5E5;
+    margin-bottom: 3.5em;
+}
+
+.home__buttom{
+    text-decoration: none;
+    font-size: 3em;
+    border: none;
+    color:#E5E5E5;
+    padding: 0.6em 0.8em;
+    margin-left: 7.5rem;
+    border-radius: 2em;
+    text-align: center;
+    background-color: #0085FF;
+    transition: all 0.3s;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.home__buttom >a{
+    text-align: center;
+    color: #E5E5E5;
+    text-decoration: none;
+}
+
+.home__buttom:hover{
+    transform:translateY(-5%);
+    background-color: #0057FF;
+}
+/*Pie de pagina*/
+.footer{
+    grid-area:footer;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    color: white;
+    background-color:#17191b;
+    padding: 8px;
+    margin-top: 20px;
+}
+
+/*Responsive*/
+
+/*Modo escritorio 1200px*/
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (max-width: 1200px) { 
+    body{
+    font-size: 14px;
+    }
+    
+    .enlaces >a{
+    font-size: 1.3em;
+    }
+
+    .social__svg{
+    width: 1.9em;
+    height: 1.9em;
+    }
+
+    .home__picture > img{
+    width: 36.75rem;
+    height: 34.375rem;
+    }
+
+    .home__texto{
+    margin-top: 6.5em;
+    }
+
+    .texto > h1{
+    font-size: 2.2em;
+    }
+        
+    .texto > h2{
+    font-size: 1.9em;
+    }
+        
+    .texto>h3{
+    font-size: 1.3em;
+    margin-bottom: 2.8em;
+    }
+
+    .home__buttom{
+    font-size: 2.8em;
+    padding: 1.4rem 3.1rem;
+    margin-left: 7rem;
+    }
+}
+
+/* Modo escritorio mas pequeño 992px
+ (desktops, 992px and up)*/
+
+@media (max-width: 992px) {
+    body{
+font-size: 13px;
+    }
+
+    .enlaces >a{
+    font-size: 1.3em;
+    }
+
+    .social__svg{
+    width: 1.8rem;
+    height: 1.7rem;
+    }
+
+    .home__picture > img{
+    width: 29.5rem;
+    height: 28.5rem;
+    }
+
+    .texto > h1{
+    letter-spacing: 1px;
+    font-size: 2.1em;
+    }
+    
+    .texto > h2{
+    letter-spacing: 1px;
+    font-size: 1.8em;
+    }
+    
+    .texto>h3{
+     letter-spacing: 1px;
+     font-size: 1.4em;
+     margin-bottom: 2.5em;
+    }
+
+    .home__buttom{
+    font-size: 2.1em;
+    padding: 1.14rem 1.6rem;
+    margin-left: 6.8rem;
+    }
+}
+   
+/* Medium devices (tablets, 768px and up)*/
+/*Modo tableta*/
+
+@media (max-width: 768px) { 
+    body{
+    font-size: 12px;
+    }
+
+    .home{
+    grid-template-areas: 
+    "header header header header "
+    "home__picture home__picture home__picture home__picture "
+    "home__texto home__texto home__texto home__texto"
+    "footer footer footer footer";
+    }
+
+    .menu__contenedor{
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.3125em 0.5em;
+    margin-top: 0.5em;
+    text-decoration: none;
+    }
+
+    #menu__icon{
+    font-size: 5em;
+    }
+
+    .enlaces{
+    position: fixed;
+    background-color: #17191b;
+    right: 0;
+    top: 68px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    transform: translateX(-100%);
+    }
+
+    .desplazamiento{
+    transform: translateX(0%);
+    }
+
+    .active{
+    background-color: #0085FF;
+    border-radius: 1.50em;
+    }
+
+    .enlaces a{
+    font-size: 3.4em;
+    }
+
+    .logo{
+    font-size: 2em;
+    margin-left: initial;
+    }
+
+    .social__svg{
+    width: 2.2rem;
+    height: 2.2rem;
+    }
+
+    .home__texto{
+    margin-top: none;
+    margin: 0 auto;
+    text-align: center;
+    }
+
+
+    .texto > h1{
+    letter-spacing: 2px;
+    font-size: 2.9em;
+    }
+    
+    .texto > h2{
+    letter-spacing: 2px;
+    font-size: 2.6em;
+    }
+    
+    .texto>h3{
+    letter-spacing: 2px;
+    font-size: 2em;
+    margin-bottom: 2.4rem;
+    }
+
+    .home__picture{
+    margin: 0 auto;
+    margin-top: 3.5rem;
+    }
+
+    .home__picture > img{
+    width: 29.8rem;
+    height: 28.5rem;
+    margin-bottom: none;
+    }
+
+    .home__buttom{
+    font-size: 3.9em;
+    padding: 1rem 2rem;
+    margin-left: none;
+    margin: 0 auto;
+    text-align: center;
+    }
+}
+
+/*Modo telefono*/
+/* Small devices (landscape phones, 576px and up)*/
+
+@media (max-width: 576px) { 
+    body{
+    font-size: 11px;
+    }
+
+    .logo{
+    font-size: 1.8em;
+    }
+
+    .social__svg{
+    width: 1.9rem;
+    height: 1.8rem;
+    }
+
+    .texto > h1{
+    letter-spacing: 2px;
+    font-size: 2.6em;
+    }
+    
+    .texto > h2{
+    letter-spacing: 2px;
+    font-size: 2.4em;
+    }
+    
+    .texto>h3{
+    letter-spacing: 2px;
+    font-size: 1.7em;
+    margin-bottom: 2.4rem;
+    }
+
+    .home__picture > img{
+    width: 26.8rem;
+    height: 26.5rem;
+    margin-bottom: none;
+    width: 100%;
+    }
+
+    .home__buttom{
+    font-size: 3.4em;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+    text-align: center;
+    }
+}
